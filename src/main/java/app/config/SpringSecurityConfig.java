@@ -7,42 +7,29 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.AuthenticationEntryPoint;
-import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
-
 	
-	@Autowired
-	private AccessDeniedHandler accessDeniedHandler;
-
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/index");
-	}
-
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
-		// rest için
-		// http.csrf().disable().authorizeRequests()
-		// .anyRequest().authenticated()
-		// .and().httpBasic()
-		// .authenticationEntryPoint(authEntryPoint);
-
-		http.csrf().disable().authorizeRequests().antMatchers("/admin").permitAll().antMatchers("/admin/**")
-				.hasAnyRole("ADMIN").anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll()
-				.and().logout().permitAll().and().exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+		http.csrf().requireCsrfProtectionMatcher(new AntPathRequestMatcher("**/login")).and().authorizeRequests()
+				.antMatchers("/dashboard").hasRole("USER").and().formLogin().defaultSuccessUrl("/dashboard")
+				.loginPage("/login").and().logout().permitAll();
+		
 
 	}
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().withUser("cagatay").password("cagatay").roles("USER");
-		auth.inMemoryAuthentication().withUser("cagatay").password("cagatay1").roles("ADMIN");
-
 	}
 
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/*.css");
+		web.ignoring().antMatchers("/*.js");
+	}
 }
