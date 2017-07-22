@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 import app.config.AppConfig;
 
 
-@SpringBootApplication 
+@SpringBootApplication  
 @Import(AppConfig.class)
 public class BootApp extends SpringBootServletInitializer {
 
