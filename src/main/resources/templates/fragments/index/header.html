@@ -11,18 +11,7 @@
 	<script src="../index/js/jquery.js"></script>
 	<script src="../index/js/jquery-migrate-1.1.1.js"></script>
 	<script src="../index/js/bgstretcher.js"></script>
-	<script src="../index/js/forms.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('body').bgStretcher({
-				images : [ 'index/images/slide-1.jpg' ],
-				imageWidth : 1600,
-				imageHeight : 964,
-				resizeProportionally : true
-			});
-		});
-	</script>
-	<script src="../index/js/forms.js"></script>
+
 
 	<!--[if lt IE 9]>   
 <script src="js/html5shiv.js"></script>
@@ -58,7 +47,7 @@
 						<nav>
 							<ul class="menu">
 								<li class="current"><a href="index.html">Anasayfa</a></li>
-								<li><a th:href="@{/index}">Ürünler</a></li>
+								<li><a th:href="@{/gallery}">Ürünler</a></li>
 								<li><a th:href="@{/index}">Hizmetler</a></li>
 								<li><a th:href="@{/index}">Hakkımızda</a></li>
 								<li><a th:href="@{/order}">Sipariş Ver</a></li>

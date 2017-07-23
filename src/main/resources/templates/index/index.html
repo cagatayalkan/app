@@ -2,43 +2,76 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Spring Security Example </title>
-    <div th:replace="fragments/index/headerIndex:: header-css"></div>
+<title>Spring Security Example</title>
+<div th:replace="fragments/index/header:: header-css"></div>
+	    	<script>
+		$(document).ready(
+				function() {
+					$('body').bgStretcher(
+							{
+								images : [ 'index/images/ipek1.png',
+										'index/images/slide-1.jpg',
+										'index/images/slide-2.jpg',
+										'index/images/slide-3.jpg' ],
+								imageWidth : 1600,
+								imageHeight : 964,
+								resizeProportionally : true,
+								slideDirection : 'N',
+								slideShowSpeed : 1000,
+								transitionEffect : 'fade',
+								sequenceMode : 'normal',
+								pagination : '#nav'
+							});
+				});
+	</script>
+
 </head>
 <body>
 
-<div th:replace="fragments/index/headerIndex :: header"/>
+	<div class="extra-block1">
+		<div th:replace="fragments/index/header :: header" />
+	</div>
 
- <div class="block">
- 
-  <div class="nav-buttons">
-    <div id="nav">&nbsp;</div>
-  </div>
-  
-  <div class="row-1">
-    <div class="container_12">
-      <div class="wrapper">
+	<div class="block">
 
-        <article class="grid_4">
-          <figure class="box-1"><img src="../index/images/page1-img1.jpg" alt=""/>
-            <figcaption>Face Care <a th:href="@{/index}"></a></figcaption>
-          </figure>
-        </article>
-        <article class="grid_4">
-          <figure class="box-1"><img src="../index/images/page1-img2.jpg" alt=""/>
-            <figcaption>Hand Care <a th:href="@{/index}"></a></figcaption>
-          </figure>
-        </article>
-        <article class="grid_4">
-          <figure class="box-1"><img src="../index/images/page1-img3.jpg" alt=""/>
-            <figcaption>Foot Care <a th:href="@{/index}"></a></figcaption>
-          </figure>
-        </article>
-        
-      </div>
-    </div>
-  </div>
-  <div th:replace="fragments/index/footerIndex :: footer"/>
-</div>
+		<div class="nav-buttons">
+			<div id="nav">&nbsp;</div>
+		</div>
+
+		<div class="row-1">
+			<div class="container_12">
+				<div class="wrapper">
+
+					<article class="grid_4">
+						<figure class="box-1">
+							<img src="../index/images/page1-img1.jpg" alt="" />
+							<figcaption>
+								Face Care <a th:href="@{/index}"></a>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="grid_4">
+						<figure class="box-1">
+							<img src="../index/images/page1-img2.jpg" alt="" />
+							<figcaption>
+								Hand Care <a th:href="@{/index}"></a>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="grid_4">
+						<figure class="box-1">
+							<img src="../index/images/page1-img3.jpg" alt="" />
+							<figcaption>
+								Foot Care <a th:href="@{/index}"></a>
+							</figcaption>
+						</figure>
+					</article>
+
+				</div>
+			</div>
+		</div>
+		<div th:replace="fragments/index/footerIndex :: footer" />
+	</div>
+	
 </body>
 </html>

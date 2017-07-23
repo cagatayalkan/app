@@ -18,6 +18,10 @@ public class IndexController {
 		
 		return "index/order";
 	}
-
+	@RequestMapping(value = { "/gallery"}, method = RequestMethod.GET)
+	public String gallery(){
+		
+		return "index/gallery";
+	}
 
 }

@@ -4,16 +4,18 @@
 <head>
 <title>Spring Security Example</title>
 <div th:replace="fragments/index/header :: header-css" />
-<script>
-	$(document).ready(function() {
-		$('body').bgStretcher({
-			images : [ '/index/images/slide-1.jpg' ],
-			imageWidth : 1600,
-			imageHeight : 964,
-			resizeProportionally : true
+	<script>
+		$(document).ready(function() {
+			$('body').bgStretcher({
+				images : [ 'index/images/slide-1.jpg' ],
+				imageWidth : 1600,
+				imageHeight : 964,
+				resizeProportionally : true
+			});
 		});
-	});
-</script>
+	</script>
+		<script src="../index/js/forms.js"></script>
+
 </head>
 <body>
 	<div class="extra-block">
