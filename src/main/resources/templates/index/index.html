@@ -3,11 +3,11 @@
 
 <head>
     <title>Spring Security Example </title>
-    <div th:replace="fragments/index/header :: header-css"/>
+    <div th:replace="fragments/index/headerIndex:: header-css"></div>
 </head>
 <body>
 
-<div th:replace="fragments/index/header :: header"/>
+<div th:replace="fragments/index/headerIndex :: header"/>
 
  <div class="block">
  
@@ -20,17 +20,17 @@
       <div class="wrapper">
 
         <article class="grid_4">
-          <figure class="box-1"><img src="../images/page1-img1.jpg" alt=""/>
+          <figure class="box-1"><img src="../index/images/page1-img1.jpg" alt=""/>
             <figcaption>Face Care <a th:href="@{/index}"></a></figcaption>
           </figure>
         </article>
         <article class="grid_4">
-          <figure class="box-1"><img src="../images/page1-img2.jpg" alt=""/>
+          <figure class="box-1"><img src="../index/images/page1-img2.jpg" alt=""/>
             <figcaption>Hand Care <a th:href="@{/index}"></a></figcaption>
           </figure>
         </article>
         <article class="grid_4">
-          <figure class="box-1"><img src="../images/page1-img3.jpg" alt=""/>
+          <figure class="box-1"><img src="../index/images/page1-img3.jpg" alt=""/>
             <figcaption>Foot Care <a th:href="@{/index}"></a></figcaption>
           </figure>
         </article>
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div th:replace="fragments/index/footer :: footer"/>
+  <div th:replace="fragments/index/footerIndex :: footer"/>
 </div>
 </body>
 </html>
