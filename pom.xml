@@ -5,7 +5,7 @@
 	<artifactId>app</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -15,7 +15,7 @@
 		<postgresql.version>9.4.1212.jre7</postgresql.version>
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<gson.version>2.5</gson.version>
-		<springsecurity4.version>3.0.2.RELEASE</springsecurity4.version>		
+		<springsecurity4.version>3.0.2.RELEASE</springsecurity4.version>
 	</properties>
 
 	<dependencies>
@@ -30,33 +30,34 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 			<version>${spring-boot.version}</version>
 		</dependency>
-		
+
 		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>${spring-boot.version}</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>${spring-boot.version}</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>1.5.4.RELEASE</version>
+		</dependency>
+
+
+		<!-- do you like thymeleaf? -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 			<version>${spring-boot.version}</version>
 		</dependency>
-				
-		<!-- do you like thymeleaf? -->
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
 
 		<!-- optional, it brings userful tags to display spring security stuff -->
-        <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity4</artifactId>
-            <version>${springsecurity4.version}</version>
-        </dependency>
-	 
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+			<version>${springsecurity4.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -76,14 +77,14 @@
 		</dependency>
 
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
