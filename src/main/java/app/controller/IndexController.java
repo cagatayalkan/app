@@ -23,5 +23,17 @@ public class IndexController {
 		
 		return "index/gallery";
 	}
+	@RequestMapping(value = { "/services"}, method = RequestMethod.GET)
+	public String services(){
+		
+		return "index/services";
+	}
+	
+	@RequestMapping(value = { "/about-us"}, method = RequestMethod.GET)
+	public String about(){
+		
+		return "index/about-us";
+	}
+
 
 }
