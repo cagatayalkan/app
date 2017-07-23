@@ -8,56 +8,61 @@
 	<link rel="icon" href="../index/images/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="../index/images/favicon.ico"
 		type="image/x-icon" />
+	<link rel="stylesheet" href="../index/css/jquery.fancybox.css" />
 	<script src="../index/js/jquery.js"></script>
 	<script src="../index/js/jquery-migrate-1.1.1.js"></script>
 	<script src="../index/js/bgstretcher.js"></script>
 
+	<script src="../index/js/jquery.elastislide.js"></script>
+	<script src="../index/js/jquery.fancybox.pack.js"></script>
 
-	<!--[if lt IE 9]>   
-<script src="js/html5shiv.js"></script>
-<link href="css/ie.css" rel="stylesheet" type="text/css" media="screen">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">  
-<![endif]-->
+
+
+	
+<script src="../index/js/html5shiv.js"></script>
+<link href="../index/css/ie.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css"/>  
+
 </div>
 
 </head>
 <body>
 	<div th:fragment="header">
-	
-			<div class="row-top">
+
+		<div class="row-top">
+			<div class="main">
+				<ul class="list-soc">
+					<li><a href="#"><img alt=""
+							src="../index/images/soc-icon3.png" /></a></li>
+					<li><a href="#"><img alt=""
+							src="../index/images/soc-icon2.png" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<header>
+			<div class="row-nav">
 				<div class="main">
-					<ul class="list-soc">
-						<li><a href="#"><img alt=""
-								src="../index/images/soc-icon3.png" /></a></li>
-						<li><a href="#"><img alt=""
-								src="../index/images/soc-icon2.png" /></a></li>
-					</ul>
+					<h1 class="logo">
+						<a th:href="@{/index}"><img alt=""
+							src="../index/images/logo.png" /></a>
+					</h1>
+					<nav>
+						<ul class="menu">
+							<li class="current"><a href="index.html">Anasayfa</a></li>
+							<li><a th:href="@{/gallery}">Ürünler</a></li>
+							<li><a th:href="@{/index}">Hizmetler</a></li>
+							<li><a th:href="@{/index}">Hakkımızda</a></li>
+							<li><a th:href="@{/order}">Sipariş Ver</a></li>
+						</ul>
+					</nav>
+					<div class="clear"></div>
 				</div>
 			</div>
-			<header>
-				<div class="row-nav">
-					<div class="main">
-						<h1 class="logo">
-							<a th:href="@{/index}"><img alt=""
-								src="../index/images/logo.png" /></a>
-						</h1>
-						<nav>
-							<ul class="menu">
-								<li class="current"><a href="index.html">Anasayfa</a></li>
-								<li><a th:href="@{/gallery}">Ürünler</a></li>
-								<li><a th:href="@{/index}">Hizmetler</a></li>
-								<li><a th:href="@{/index}">Hakkımızda</a></li>
-								<li><a th:href="@{/order}">Sipariş Ver</a></li>
-							</ul>
-						</nav>
-						<div class="clear"></div>
-					</div>
-				</div>
-			</header>
-		</div>
-	
+		</header>
+	</div>
+
 </body>
 </html>

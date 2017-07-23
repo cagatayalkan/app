@@ -2,11 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<div th:replace="fragments/index/header :: header-css" ></div>
-
-<link rel="stylesheet" href="../index/css/jquery.fancybox.css" />
-<script src="../index/js/jquery.elastislide.js"></script>
-<script src="../index/js/jquery.fancybox.pack.js"></script>
+<div th:replace="fragments/index/header :: header-css"></div>
 
 <script>
 	$(document).ready(function() {
@@ -37,7 +33,7 @@
 <body>
 	<div class="extra-block">
 		<div th:replace="fragments/index/header :: header" />
-		
+
 		<section id="content">
 			<div class="main-block">
 				<div class="main">
